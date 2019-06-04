@@ -28,11 +28,22 @@ func threeSum(nums []int) [][]int {
 			case target > 0:
 				// 大的数需要变小
 				third--
+			case target < 0:
+				// 小的数需要变大
+				second++
 			default:
 				result = append(result, []int{nums[first], nums[second], nums[third]})
+				// 另外两个数去重
+				for second < third && nums[second+1] == nums[second] {
+					second++
+				}
+				for second < third && nums[third] == nums[third-1] {
+					third--
+				}
+				second++
+				third--
 			}
 		}
 	}
-
-	return nil
+	return result
 }
