@@ -9,32 +9,40 @@ func main() {
 }
 
 func search(nums []int, target int) int {
-
+	if len(nums) == 0 {
+		return -1
+	}
+	// 先找最小的数的下标，即旋转点
+	// 应用二分时需要比较mid值与right值
+	left := 0
+	right := len(nums) - 1
+	for left < right {
+		mid := left + (right-left)/2
+		if nums[mid] > nums[right] {
+			left = mid + 1
+		} else {
+			right = mid
+		}
+	}
+	minIndex := left
+	// 然后让最小的数和target比较，找出target所在区间后应用二分
+	left = 0
+	right = len(nums) - 1
+	if nums[minIndex] <= target && target <= nums[right] {
+		left = minIndex
+	} else {
+		right = minIndex
+	}
+	for left <= right {
+		mid := left + (right-left)/2
+		if nums[mid] == target {
+			return mid
+		}
+		if nums[mid] < target {
+			left = mid + 1
+		} else {
+			right = mid - 1
+		}
+	}
+	return -1
 }
-
-// class Solution {
-//     public int search(int[] nums, int target) {
-//         if (nums == null || nums.length == 0) return -1;
-//         int left = 0;
-//         int right = nums.length - 1;
-//         while (left < right) {
-//             int mid = left + (right - left) / 2;
-//             if (nums[mid] > nums[right]) left = mid + 1;
-//             else right = mid;
-//         }
-//         //System.out.println(left);
-//         int split_t = left;
-//         left = 0;
-//         right = nums.length - 1;
-//         if (nums[split_t] <= target && target <= nums[right]) left = split_t;
-//         else right = split_t;
-//         while (left <= right) {
-//             int mid = left + (right - left) / 2;
-//             if (nums[mid] == target) return mid;
-//             else if (nums[mid] > target) right = mid - 1;
-//             else left = mid + 1;
-//         }
-//         return -1;
-
-//     }
-// }
