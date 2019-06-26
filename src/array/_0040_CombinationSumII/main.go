@@ -26,7 +26,9 @@ func dfs(candidates []int, target int, start int, result *[][]int, resultSingle 
 		return
 	}
 	if target == 0 {
-		*result = append(*result, resultSingle)
+		tmp := make([]int, len(resultSingle))
+		copy(tmp, resultSingle)
+		*result = append(*result, tmp)
 		return
 	}
 	for i := start; i < len(candidates); i++ {
@@ -34,10 +36,8 @@ func dfs(candidates []int, target int, start int, result *[][]int, resultSingle 
 		if i > start && candidates[i] == candidates[i-1] {
 			continue
 		}
-		tmp := make([]int, len(resultSingle))
-		copy(tmp, resultSingle)
-		tmp = append(tmp, candidates[i])
-		dfs(candidates, target-candidates[i], i+1, result, tmp)
-		tmp = tmp[:len(tmp)-1]
+		resultSingle = append(resultSingle, candidates[i])
+		dfs(candidates, target-candidates[i], i+1, result, resultSingle)
+		resultSingle = resultSingle[:len(resultSingle)-1]
 	}
 }

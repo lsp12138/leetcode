@@ -1,19 +1,23 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 func main() {
-	nums := []int{1, 2, 3}
-	fmt.Println(permute(nums))
+	nums := []int{1, 1, 2}
+	fmt.Println(permuteUnique(nums))
 }
-func permute(nums []int) [][]int {
+func permuteUnique(nums []int) [][]int {
+	// 先排序
+	sort.Ints(nums)
 	result := [][]int{}
 	resultSingle := []int{}
 	visited := make([]bool, len(nums))
 	backTrack(nums, &result, resultSingle, visited)
 	return result
 }
-
 func backTrack(nums []int, result *[][]int, resultSingle []int, visited []bool) {
 	if len(resultSingle) == len(nums) {
 		tmp := make([]int, len(resultSingle))
@@ -23,6 +27,10 @@ func backTrack(nums []int, result *[][]int, resultSingle []int, visited []bool) 
 	}
 	for i := 0; i < len(nums); i++ {
 		if visited[i] == true {
+			continue
+		}
+		// 去重
+		if i > 0 && nums[i] == nums[i-1] && visited[i-1] == false {
 			continue
 		}
 		visited[i] = true
