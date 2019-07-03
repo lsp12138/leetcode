@@ -29,8 +29,6 @@ Input: [5,1,4,null,null,3,6]
 Output: false
 Explanation: The root node's value is 5 but its right child's value is 4.
 ```
-## 解法一：中序遍历
+## 解法一：搜索树的特性
 
-判断是不是二叉搜索树，用中序遍历的模板，中序的顺序就是有序的。
-
-所以中序遍历时的当前值应该比前一个值大，可以用一个指针专门指向前一个值。
+判断是不是二叉搜索树，即左子树的值都比自身小，右子树的值都比自身大，可以用递归处理。
