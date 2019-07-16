@@ -13,6 +13,8 @@ If you have figured out the O(n) solution, try coding another solution using the
 
 ## 解法一：动态规划
 
+最大子序和 。
+
 用两个变量，一个result记录最大的和，一个sum记录当前的和。具体：
 
 1. 初始时，result为数组中第一个数的值，sum为0。

@@ -19,6 +19,8 @@ return its level order traversal as:
 ]
 ```
 ## 解法一：广度优先（队列）
+	
+二叉树的层次遍历。
 
 层序遍历的结果依次压入队列，详见代码。
 

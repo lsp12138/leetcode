@@ -20,6 +20,8 @@ Explanation: You will always arrive at index 3 no matter what. Its maximum
 ```
 ## 解法一：贪心
 
+跳跃游戏。
+
 从前向后遍历，两个指针，一个start指针用来遍历，另一个end指针记录当前最远能走到的位置下标，遍历结束后如果这个下标能够到达最后一个元素，返回true。
 
 因为要判断能不能到达最后一个元素，所以在遍历时，指针最远只能到倒数第二个元素。

@@ -43,6 +43,8 @@ rotate the input matrix in-place such that it becomes:
 ```
 ## 解法一：转置后翻转
 
+旋转图像。
+
 要求顺时针旋转一个二维数组（正方形）。
 
 最直接的想法是先转置矩阵，然后翻转每一行。

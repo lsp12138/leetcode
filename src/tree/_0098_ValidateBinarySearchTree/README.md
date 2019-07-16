@@ -30,5 +30,7 @@ Output: false
 Explanation: The root node's value is 5 but its right child's value is 4.
 ```
 ## 解法一：搜索树的特性
+	
+验证二叉搜索树。
 
 判断是不是二叉搜索树，即左子树的值都比自身小，右子树的值都比自身大，可以用递归处理。

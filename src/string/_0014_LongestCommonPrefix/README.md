@@ -19,6 +19,8 @@ Note:
 All given inputs are in lowercase letters a-z.
 
 ## 解法一：两两对比
+	
+最长公共前缀。
 
 1. 初始化数组中第一个字符串为初始最长公共前缀。
 2. 然后与第二个字符串比较，更新最长公共前缀。

@@ -21,4 +21,6 @@ For the purpose of this problem, we will return 0 when needle is an empty string
 
 ## 解法一：直接用切片
 
+实现strStr()。
+
 切片的切取范围是needle的长度。

@@ -24,6 +24,8 @@ Explanation: There are three ways to climb to the top.
 ```
 ## 解法一：动态规划
 
+爬楼梯。
+
 用数组dp[i]表示爬i层有多少方法。
 
 爬一层有1种方法，爬两层有2种方法。

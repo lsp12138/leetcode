@@ -24,6 +24,8 @@ Coud you solve it without converting the integer to a string?
 
 ## 解法一：双指针
 
+回文数。
+
 先转成字符串，`s := strconv.Itoa(x)`，然后头尾双指针判断。
 
 ## 解法二：反转数字

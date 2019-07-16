@@ -17,6 +17,8 @@ One possible answer is: [0,-3,9,-10,null,5], which represents the following heig
 ```
 ## 解法一：递归
 
+将有序数组转换为二叉搜索树。
+
 将一个按照升序排列的有序数组，转换为一棵高度平衡二叉搜索树。
 
 根节点为数组最中间的数。左右部分各自应用递归。

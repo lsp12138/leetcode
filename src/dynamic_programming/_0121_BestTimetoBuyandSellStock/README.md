@@ -19,8 +19,8 @@ Output: 0
 Explanation: In this case, no transaction is done, i.e. max profit = 0.
 ```
 ## 解法一：动态规划
-
-买股票的最佳时机。
+	
+买卖股票的最佳时机。
 
 需要两个变量，一个记录最终的收益，一个记录临时的收益。
 

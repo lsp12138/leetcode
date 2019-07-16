@@ -32,6 +32,8 @@ Can you solve it using O(1) (i.e. constant) memory?
 
 ## 解法一：哈希表
 
+环形链表。
+
 遍历链表，新出现的节点放入哈希表，如果节点重复出现说明有环。
 
 ## 解法二：双指针

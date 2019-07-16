@@ -28,4 +28,6 @@ There are two ways to reach the bottom-right corner:
 ```
 ## 解法一：动态规划
 
+不同路径 II。
+
 参考62题，要做障碍物判断。

@@ -49,6 +49,8 @@ Explanation: The number "-91283472332" is out of the range of a 32-bit signed in
 ```
 ## 解法一：正则
 
+字符串转换整数 (atoi)。
+
 直接正则，顶多再去一下开头的空格。
 
 然后根据匹配到的字符串的开头是+还是-还是都没有三种情况分别处理。

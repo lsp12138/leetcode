@@ -28,6 +28,8 @@ It doesn't matter what values are set beyond the returned length.
 
 ## 解法一：双指针
 
+移除元素。
+
 类似26题，一开始两个指针都指向下标0的元素，之后快指针先走，遇到不是val的数就赋值给慢指针。
 
 ## 解法二：双指针优化

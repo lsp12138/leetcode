@@ -17,6 +17,8 @@ Although the above answer is in lexicographical order, your answer could be in a
 
 ## 解法一：回溯
 
+电话号码的字母组合。
+
 用哈希表保存数字与字母的对应关系。类似排列组合问题。
 
 除了原始输入，递归函数需要3个参数：总结果，单个结果，起始下标。

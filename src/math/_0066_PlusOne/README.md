@@ -19,4 +19,6 @@ Explanation: The array represents the integer 4321.
 ```
 ## 解法一：反向遍历直接算
 
+加一。
+
 需要注意首位的拆分情况。
