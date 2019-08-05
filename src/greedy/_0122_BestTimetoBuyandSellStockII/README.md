@@ -26,7 +26,7 @@ Input: [7,6,4,3,1]
 Output: 0
 Explanation: In this case, no transaction is done, i.e. max profit = 0.
 ```
-## 解法一：一次遍历
+## 解法一：一次遍历（贪心算法？）
 	
 买卖股票的最佳时机 II。
 
