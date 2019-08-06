@@ -11,9 +11,9 @@ Follow up:
 
 If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
 
-## 解法一：动态规划
+## 解法一：一次遍历（贪心算法？）
 
-最大子序和 。
+最大子序和。
 
 用两个变量，一个result记录最大的和，一个sum记录当前的和。具体：
 
